@@ -139,7 +139,7 @@ body {
 /* Conteudo 2 */
 
 .conteudo2 {
-    background-image: url(mulherNubank.png);
+    background-image: url(/img/mulherNubank.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -190,6 +190,10 @@ body {
     margin-left: 5%;
 }
 
+.conteudo3-p a {
+    color: #2d004b;
+}
+
 .conteudo3-img {
     width: 20%;
 }
@@ -221,49 +225,8 @@ body {
     margin: 0 auto;
 }
 
-@media (max-width: 900px) {
-.cabecalho-menu-item {
-    display:none;
-}   
-
-.cabecalho-menu-item-login {
-    font-size: 26px;
-}
-
-.conteudo-principal {
-    padding: 4%;
-    flex-direction: column;
-}
-
-.conteudo1 {
-    margin-top: 0;
-    margin-bottom: 0%;
-}
-
-.conteudo1 p {
-    margin-top: 1%;
-}
-
-.conteudo1-div {
-    padding: 4%;
-    display: block;
-}
-
-.conteudo2-div {
-    font-size: 34px;
-}
-
-.conteudo2-div p {
-    font-size: 28px;
-}
-
-.conteudo3-p {
-    font-size: 28px;
-    max-width: 490px;
-}
-
-.conteudo3-img {
-    width: 95%;
-}
-
+@media (max-width: 800px) {
+    .cabecalho-menu-item {
+        display:none;
+    }   
 }
