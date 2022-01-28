@@ -16,11 +16,17 @@ body {
 }
 
 .cabecalho {
+    width: 100%;
+    background: linear-gradient(100deg, #810ad1f3, #9447c7f8, rgba(190, 190, 190, 0.925) 46%);
+    position: fixed;
+    top: 0;
+    z-index: 99;  
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    padding: 24px;
+    padding: 2px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .cabecalho-imagem {
@@ -35,21 +41,34 @@ body {
 .cabecalho-menu-item {
     font-family: 'Sarala', sans-serif;
     color: #ffffff;
+    font-weight: bold;
+    text-shadow: 0.03em 0.03em 0.05em #410866;
+    font-size: 18px;
+}
+
+.cabecalho-menu-item-login {
+    font-family: 'Sarala', sans-serif;
     font-weight: 400;
     font-size: 18px;
 }
 
+/* Conteudo */
+
 .conteudo {
     margin-bottom: 48px;
-    border-top: 0.4px solid #FFF2E7;
 }
 
 .conteudo-principal {
-    padding: 2%;
+    padding-top: 21vh;
+    padding-bottom: 21vh;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+}
+
+.cardNu-mobile {
+    display: none;
 }
 
 .conteudo-principal-escrito {
@@ -103,6 +122,7 @@ body {
 }
 
 .conteudo1-div {
+    padding-top: 50px;
     margin-top: auto;
     display: flex;
 }
@@ -113,14 +133,13 @@ body {
 
 .conteudo1-h3 {
     border-top: 0.4px solid #FFF2E7;
-    padding-top: 48px;
+    padding-top: 38px;
     font-family: 'Righteous', cursive;
     font-weight: 400;
     font-size: 34px;
     color: #2d004b;    
     margin-bottom: 16px;
 }
-
 .conteudo1-p {
     text-align: start;
     font-family: 'Sarala', sans-serif;
@@ -157,7 +176,6 @@ body {
     padding-top: 10%;
     padding-left: 50%;
 }
-
 .conteudo2-div p { 
     font-family: 'Sarala', sans-serif;
     font-size: 28px;
@@ -181,16 +199,21 @@ body {
 }
 
 
-.conteudo3-p {
+.conteudo3-p, .conteudo3-p1 {
     font-family: 'Sarala', sans-serif;
     font-weight: bold;
     font-size: 28px;
     color: #820ad1;
     max-width: 690px;
-    margin-left: 5%;
+    margin-left: 4%;
 }
 
-.conteudo3-p a {
+.conteudo3-p1 {
+    text-align: end;
+    margin-right: 4%;
+}
+
+.conteudo3-p a, .conteudo3-p1 a {
     color: #2d004b;
 }
 
@@ -207,9 +230,10 @@ body {
 .rodape {
     padding: 32px;
     background-color: rgb(26, 26, 26);
+    overflow: hidden;
 }
 
-.rodape p {
+.rodape-p {
     font-family: 'Sarala', sans-serif;
     font-weight: bold;
     font-size: 18px;
@@ -225,8 +249,93 @@ body {
     margin: 0 auto;
 }
 
-@media (max-width: 800px) {
+.rodape1 {
+    background-color: rgb(26, 26, 26);
+    padding: 32px;
+}
+
+.rodape1-sno {
+    color: rgb(255, 0, 0);
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+@media (max-width: 900px) {
     .cabecalho-menu-item {
         display:none;
     }   
+    .cabecalho-menu-item-login {
+        font-size: 24px;    
+    }
+
+    .conteudo-principal {
+        padding-top: 14vh!important;
+        padding-bottom: 6vh!important;
+        padding: 2vh;
+        max-width: 475px;
+    }
+
+    .iframe {
+        display: none;
+    }
+
+    .cardNu-mobile {
+       display: flex;
+       width: 95%;
+       align-items: center;
+       padding-top: 5.5vh; 
+       padding-left: 2.4vh; 
+    }
+
+    .conteudo-principal, .conteudo1 {
+        display: grid;
+    }
+
+    .conteudo1 {
+        margin-bottom: 42px; 
+    }
+
+    .conteudo1-div {
+    padding-top: 0px;
+    }
+
+    .conteudo1-div img {
+        margin-top: 1.5vh;
+        border-radius: 10px;
+        width: 70vh;
+        height: 20vh;
+    }
+
+    .conteudo1-h3 {
+        padding-top: 28px;
+        font-size: 30px;  
+    }
+
+    .conteudo1-p {
+        font-size: 18px;
+        margin-top: 1vh;
+        max-width: 490px;
+    }
+
+    .conteudo-principal-escrito-titulo {
+        font-size: 32px;
+    }
+
+    .conteudo2-div {
+        padding-top: 2%;
+        padding-left: 30%;
+    }
+    
+    .conteudo3-img {
+        width: 210%;
+        margin-right: 2%;
+    }
+
+    .conteudo3-p, .conteudo3-p1 {
+        font-size: 20px;
+        max-width: 190px;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
 }
